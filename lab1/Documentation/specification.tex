@@ -52,7 +52,7 @@
 \section{Opis algorytmu nadawania ograniczeń dla krawędzi}
 Algorytm bazuje na pomyśle propagowania zmiany w danej krawędzi do następnej. Wówczas kolejna krawędź jest przesuwana w taki sposób, żeby zachowywała swoje ograniczenie i nie psuła ograniczenia poprzednich krawędzi. Aplikowanie ograniczeń odbywa się jednocześnie w dwie strony od wierzchołka, którym ruszamy (lub od wierzchołka początkowego krawędzi, jeżeli dodajemy jej ograniczenie). Obrazuje to rysunek poniżej:
 \begin{center}
-\includegraphics[scale = 0.6]{diagram.jpg}
+\includegraphics[scale = 0.6]{Resources/Images/diagram.jpg}
 \end{center}
 Algorytm wykorzystuje w tym celu dwa iteratory: w przód (forward, ozn. \textbf{fw}) oraz w tył (backward, ozn. \textbf{bw}). Jest to możliwe dzięki zastosowaniu list dwukierunkowych na wierzchołki i krawędzie w implementacji klasy Polygon (reprezentującej wielokąt).\\[\baselineskip]
 Iterator \textbf{fw} próbuje dopasować wierzchołki końcowe krawędzi do początkowych (stosuje ograniczenie ``w przód''), natomiast iterator \textbf{bw} dopasowuje wierzchołki początkowe krawędzi do końcowych (stosuje ograniczenie ``w tył'').\\[\baselineskip]
