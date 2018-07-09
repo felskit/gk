@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+
+\usepackage[in]{fullpage}
+\usepackage{fancyhdr}
+
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage{mathtools}
+%\usepackage{graphicx}
+
+\usepackage[polish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\renewcommand{\thesection}{\arabic{section}.}
+%\renewcommand*{\arraystretch}{1.25}
+
+\begin{document}
+
+\begin{titlepage}
+
+  \fancyhead{}
+  \fancyfoot{}
+
+  \fancypagestyle{empty}{
+      \fancyhead[R]{\large{16.11.2016}}
+  }
+
+  \vspace*{\stretch{1.0}}
+  \begin{center}
+    \huge{GRAFIKA KOMPUTEROWA 1}\\
+    \huge{PROJEKT LABORATORYJNY 2}\\
+  \vspace*{\stretch{0.2}}
+    \Large{SPECYFIKACJA}\\
+  \vspace*{\stretch{0.2}}
+    \Large{EDYTOR WIELOKĄTÓW - WYPEŁNIANIE I OBCINANIE}\\
+  \vspace*{\stretch{0.2}}
+    \large\textbf{TYMON FELSKI, C1}\\
+  \end{center}
+    \vspace*{\stretch{1.0}}   
+
+\end{titlepage}
+
+\section{Instrukcja obsługi programu}
+\textbf{Dodawanie wielokąta}\\Wielokąty można dodawać klikając \textbf{LPM}. Na ekranie będą pojawiać się kolejne wierzchołki. Rysowanie zakończy się, jeżeli łamana zostanie zamknięta (postawimy ostatni wierzchołek dostatecznie blisko początkowego). Rysowanie można anulować wciskając \textbf{Escape}.\\[\baselineskip]
+\textbf{Przesuwanie wielokąta}\\Wielokąt można przesunąć wciskając \textbf{Shift + LPM} lub \textbf{ŚPM}, gdy kursor znajduje się w środku tego wielokąta. Jeżeli kilka wielokątów się pokrywa, o wyborze decydować będzie kolejność ich rysowania.\\[\baselineskip]
+\textbf{Przesuwanie wierzchołka}\\Wierzchołek w narysowanym wielokącie można przesunąć przytrzymując na nim \textbf{LPM}.\\[\baselineskip]
+\textbf{Usuwanie wierzchołka}\\Wierzchołek w narysowanym wielokącie można usunąć wciskając na nim \textbf{PPM} i wybierając opcję \textbf{Delete} w menu kontekstowym. Wierzchołki można usuwać, jeżeli ich liczba w wielokącie jest większa od 3, w przeciwnym wypadku zostanie wyświetlony komunikat o błędzie.\\[\baselineskip]
+\textbf{Dzielenie krawędzi}\\Krawędź w narysowanym wielokącie można podzielić na dwie, dodając w środku wierzchołek. W tym celu należy wcisnąć na niej \textbf{PPM} i wybrać opcję \textbf{Split} w menu kontekstowym.\\[\baselineskip]
+\textbf{Wypełnianie wielokąta}\\Wielokąt można wypełnić wciskając na nim \textbf{PPM} i wybierając opcję \textbf{Filled}. Wielokąt wypełni się domyślnym kolorem, jeżeli w aplikacji nie zostało ustawione tło.\\[\baselineskip]
+\textbf{Ustawianie tła wielokątów}\\Aby załadowac tło wielokątów, należy wcisnąć przycisk \textbf{Load} w sekcji \textbf{Background} na bocznym panelu. Otworzy się okno dialogowe, w którym należy wybrać plik w rozszerzeniu *.png, *.bmp, *.jpg lub *.jpeg.\\[\baselineskip]
+\textbf{Ustawianie mapy wysokości (zaburzeń)}\\Aby załadować mapę wysokości wypełnienia, należy wcisnąć przycisk \textbf{Load} w sekcji \textbf{Heightmap} na bocznym panelu. Otworzy się okno dialogowe, w którym należy wybrać plik w rozszerzeniu *.png, *.bmp, *.jpg lub *.jpeg.\\[\baselineskip]
+\textbf{Usuwanie tła lub mapy wysokości}\\Zarówno tło wielokątów, jak i mapę wysokości można usunąć po wczytaniu, aby powrócić do ustawień domyślnych. Wystarczy wcisnąć przycisk \textbf{Remove} na bocznym panelu w sekcjach odpowiednio \textbf{Background} oraz \textbf{Heightmap}.\\[\baselineskip]
+\textbf{Zmiana funkcji wektorów normalnych}\\Na bocznym panelu w sekcji \textbf{Normal vectors} znajdują się radio buttony służące do zmiany predefiniowanych funkcji wektorów normalnych.\\[\baselineskip]
+\textbf{Zmiana rodzaju światła}\\W sekcji \textbf{Light} panelu bocznego można przełączać się pomiędzy opcjami światła \textbf{Static infinity} oraz \textbf{Dynamic}.\\[\baselineskip]
+\textbf{Zmiana koloru światła}\\Znajdujący się w panelu bocznym przycisk z kolorem służy do otwierania okna wyboru koloru. Kolor przycisku jest obecnym kolor światła (domyślnie biały).\\[\baselineskip]
+\textbf{Poruszanie światłem}\\W sekcji \textbf{Light} panelu bocznego znajduje się pięć textboxów, w których można zmieniać odpowiednie parametry dynamicznego oświetlenia (x środka, y środka, wysokość, promień oraz okres obiegu). W przypadku podania nieprawidłowych danych, zostaną zresetowane do domyślnych.\\[\baselineskip]
+\textbf{Zaznaczanie wielokątów}\\Wielokąty można zaznaczać wciskając \textbf{Ctrl + LPM} lub wciskając na nich \textbf{PPM} i wybierając opcję \textbf{Selected}. Zaznaczony wielokąt podświetli się na czerwono. Ponowne zaznaczenie zaznaczonego wielokąta spowoduje jego odznaczenie. Można mieć zaznaczone maksymalnie dwa wielokąty. Wciskając \textbf{Ctrl + Shift + A} można odznaczyć wszystkie zanzaczone wielokąty.\\[\baselineskip]
+\textbf{Suma wielokątów}\\Mając zaznaczone dwa nierozłączne wielokąty bez samoprzecięć, można wcisnąć \textbf{PPM} na dowolnym z nich i wybrać opcję \textbf{Union}. Zaznaczone wielokąty zostaną usunięte, a zastąpi je jeden wielokąt, będący ich sumą. Jeżeli ww. warunki nie będą spełnione, zostanie wyświetlony komunikat o błędzie.
+
+\end{document}
