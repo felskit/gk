@@ -6,10 +6,12 @@ The task was to create a polygon editor that would feature a user interface allo
 
 ### Project 2 - Polygon Editor v2.0
 
-The task was to modify the editor created as a part of the first assignment and introduce other features such as various light effects, filling polygons with different colors or images and calculating new polygons which would be a union of selected polygon pairs. The light effects were:
+The task was to modify the editor created as a part of the first assignment and introduce other features such as various light effects, filling polygons with different colors or images and calculating new polygons which would be a union of selected polygon pairs. Some of the light effects were:
 * adding a heightmap to a polygon from a bitmap image,
 * ability to move the light source and change its color,
-* application of different normal vector functions to polygons.
+* application of different normal vector functions to polygons,
+* basic specular reflections apart from regular diffused reflections.
+
 All the light effects combined would result in various patterns and shadows showing up withing the polygons.
 
 ### Project 3 - Color Extractor
